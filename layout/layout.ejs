@@ -6,7 +6,10 @@
             <% if (theme.customize.profile.enabled) { %>
                 <%- partial('common/profile', null, {cache: !config.relative_link}) %>
             <% } %>
-            <section id="main"><%- body %></section>
+            <section id="main">
+                <%- partial('ads/adsense') %>
+                <%- body %>
+            </section>
             <% if (theme.customize.sidebar) { %>
                 <%- partial('common/sidebar', null, {cache: !config.relative_link}) %>
             <% } %>
